@@ -22,3 +22,10 @@ export const snsMapping2 = Template.bind({});
 snsMapping2.args = {
   sns: ['車', '家'],
 };
+
+export const geod = Template.bind({})
+
+geod.args = {
+  sns: ["sun", "d", "e"],
+  id : 3
+}

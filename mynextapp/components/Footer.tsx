@@ -1,10 +1,11 @@
 import { VFC } from 'react'
 
 type Props = {
-  sns: string[]
+  sns: string[],
+  id:number
 }
 
-export const Footer = ({ sns }: Props) => {
+export const Footer = ({ sns, id }: Props) => {
   return (
     <footer>
       <ul>
@@ -12,6 +13,7 @@ export const Footer = ({ sns }: Props) => {
           <li key={index}>{text}</li>
         )}
       </ul>
+      {id}
     </footer>
   )
 }

@@ -1,13 +1,14 @@
 import type { NextPage } from 'next'
 import PageHead from './Head'
-import Footer from '../stories/Footer'
+import { Footer } from '../components/Footer'
 
+const snsArray: string[] = ["A", "B"]
 
 const Home: NextPage = () => {
   return (
     <>
       <PageHead />
-      <Footer />
+      <Footer sns={snsArray} id={30} />
     </>
   )
 }
