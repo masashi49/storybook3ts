@@ -2,10 +2,10 @@ import { VFC } from 'react'
 
 type Props = {
   sns: string[],
-  id:number
+  id: number
 }
 
-export const Footer = ({ sns, id }: Props) => {
+export const Footer: VFC<Props> = ({ sns, id }) => {
   return (
     <footer>
       <ul>
