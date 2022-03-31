@@ -4,9 +4,13 @@ import Link from 'next/link'
 import PageHead from './Head'
 import { Footer } from '../components/Footer'
 import { DialogError } from '../components/DialogError'
-
+import { ImageDom } from '../components/imageDom'
 
 const snsArray: string[] = ["A", "B"]
+const imgData = {
+  src: 'https://assets.vercel.com/twemoji/1f600.svg',
+  alt : "hello"
+}
 
 const Home: NextPage = () => {
   return (
@@ -22,6 +26,7 @@ const Home: NextPage = () => {
         <a>ディレクトリ構成についてい考える</a>
       </Link>
       <DialogError error="アウト" />
+      <ImageDom imgData={imgData}/>
     </>
   )
 }
