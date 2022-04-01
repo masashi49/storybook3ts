@@ -8,7 +8,7 @@ import { ImageDom } from '../components/imageDom'
 
 const snsArray: string[] = ["A", "B"]
 const imgData = {
-  src: 'https://assets.vercel.com/twemoji/1f600.svg',
+  src: 'http://www.cor-art.com/best/tenkei/down/SA001.JPG',
   alt: "hello"
 }
 

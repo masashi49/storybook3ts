@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['iconbu.com','assets.vercel.com'],
+    domains: ['iconbu.com','www.cor-art.com'],
   },
 }
 

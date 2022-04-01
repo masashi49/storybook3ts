@@ -12,8 +12,8 @@ type Props = {
 export const ImageDom: VFC<Props> = ({ imgData }) => {
   return (
     <>
-      <Image src={imgData.src} alt={imgData.alt} width="300px" height="200px"/>
-      <img src="https://iconbu.com/wp-content/uploads/2019/09/01-12.png" />
+      <Image src={imgData.src} alt={imgData.alt} width={360} height={240} layout={"fixed"} />
+      <img src={imgData.src} />
     </>
-    );
+  );
 };
