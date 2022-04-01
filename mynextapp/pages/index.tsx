@@ -9,7 +9,7 @@ import { ImageDom } from '../components/imageDom'
 const snsArray: string[] = ["A", "B"]
 const imgData = {
   src: 'https://assets.vercel.com/twemoji/1f600.svg',
-  alt : "hello"
+  alt: "hello"
 }
 
 const Home: NextPage = () => {
@@ -26,19 +26,17 @@ const Home: NextPage = () => {
         <a>ディレクトリ構成についてい考える</a>
       </Link>
       <DialogError error="アウト" />
-      <ImageDom imgData={imgData}/>
+      <ImageDom imgData={imgData} />
     </>
   )
 }
 
 const container = css`
-  min-height: 100vh;
   padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   background:#ccc;
 `
 
