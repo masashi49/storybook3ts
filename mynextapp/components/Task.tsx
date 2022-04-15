@@ -1,6 +1,6 @@
 import React, { VFC } from 'react'
 
-type Props = {
+export type Props = {
     task: {
         id: number ,
         title: string,

@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { Task } from './Task';
+import { Props, Task } from './Task';
 
 export default {
     title: 'Task',
@@ -33,7 +33,8 @@ Pinned.args = {
 export const Archived = Template.bind({})
 Archived.args = {
     task: {
-        ...Default.args.task,
+        id: 100,
+        title: "TaskTest",
         state: 'TASK_ARCHIVED',
     }
 }
