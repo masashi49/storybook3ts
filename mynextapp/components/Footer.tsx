@@ -1,4 +1,5 @@
 import { VFC } from 'react'
+import { Genericsssss } from './Generics'
 
 type Props = {
   sns: string[],
@@ -14,6 +15,8 @@ export const Footer: VFC<Props> = ({ sns, id }) => {
         )}
       </ul>
       {id}
+
+      <Genericsssss />
     </footer>
   )
 }
