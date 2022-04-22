@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef, VFC } from 'react'
+import { ComponentPropsWithoutRef, VFC, useRef } from 'react'
 import { text } from 'stream/consumers';
 
 export function copy<T, U>(value: T, ai: U) {
@@ -94,8 +94,15 @@ const Example = () => {
 
 
 export const Genericsssss: VFC = () => {
+
+  const inputRef = useRef<HTMLInputElement>(null);
+  const butonOnclickEvent = () => {
+    inputRef.current?.focus()
+  }
+
   return (
     <div>
+      <p>Genericsssss</p>
       genericsをなぜ使うのか
       <ul>
         <li>- 汎用的に使いたい関数に対し、型も引数として一緒に渡せば下記の辛みが解消される。これを実行できるのがGenericsである。</li>
@@ -105,6 +112,12 @@ export const Genericsssss: VFC = () => {
       </ul>
 
       <Example />
+
+      <br />
+      <p>refにrefオブジェクト(inputRef)を入れる</p>
+      <input ref={inputRef} />
+      <button onClick={butonOnclickEvent}>ボタンだよ</button>
+
     </div>
   )
 }
