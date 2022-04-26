@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef, VFC, useRef } from 'react'
+import { ComponentPropsWithoutRef, VFC, useRef, ReactNode, ReactChild, ReactPortal, ReactFragment, ReactElement, ReactText } from 'react'
 import { text } from 'stream/consumers';
 
 export function copy<T, U>(value: T, ai: U) {
@@ -90,6 +90,51 @@ const Example = () => {
   )
 }
 
+type childrendesuyo1 = {
+  children: ReactNode
+}
+type childrendesuyo2 = {
+  children: ReactText
+}
+type childrendesuyo3 = {
+  children: ReactFragment
+}
+type childrendesuyo4 = {
+  children: ReactPortal
+}
+type childrendesuyo5 = {
+  children: ReactElement
+}
+
+const SampleChildrenNode: VFC<childrendesuyo1> = ({ children }) => {
+  return (
+    <div>
+      {children}
+    </div>
+  )
+}
+const SampleChildrenText: VFC<childrendesuyo2> = ({ children }) => {
+  return (
+    <div>
+      {children}
+    </div>
+  )
+}
+const SampleChildrenFragment: VFC<childrendesuyo3> = ({ children }) => {
+  return (
+    <div>
+      {children}
+    </div>
+  )
+}
+
+const SampleChildrenElement: VFC<childrendesuyo4> = ({ children }) => {
+  return (
+    <div>
+      {children}
+    </div>
+  )
+}
 
 
 
@@ -111,7 +156,27 @@ export const Genericsssss: VFC = () => {
         <li>- stringやnumberといったシンプルなものなら大丈夫だが、objectの場合、内包するkeyとvalueの方を全部記載する必要があり、辛い。</li>
       </ul>
 
+      ------------------ <br />
+
       <Example />
+
+      --------------------- <br />
+
+
+      <SampleChildrenNode>
+        <p>SampleChildrenNodea</p>
+      </SampleChildrenNode>
+      <SampleChildrenText>
+        SampleChildrenTextb
+      </SampleChildrenText>
+      <SampleChildrenFragment>
+        <p>SampleChildrenFragmentc</p>
+      </SampleChildrenFragment>
+      <SampleChildrenElement>
+        <p>SampleChildrenElementdddd</p>
+      </SampleChildrenElement>
+
+      ----------------------------- <br />
 
       <br />
       <p>refにrefオブジェクト(inputRef)を入れる</p>
